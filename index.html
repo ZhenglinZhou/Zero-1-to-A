@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bulma css template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <!-- model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+  <title>
+    HeadStudio
+  </title>
+  <!-- <link rel="icon" href="icon.ico"> -->
+</head>
+<body>
+  <section class="section">
+
+  <div class="container has-text-centered">
+    <!-- paper title -->
+    <p class="title is-2"> Zero-1-to-A: Zero-Shot One image to Animatable Head Avatars Using Video Diffusion </p><br>
+    <!-- publication -->
+    <p class="subtitle is-4"> CVPR 2025 </p>
+    <!-- authors -->
+    <p class="title is-5 mt-2">
+      <a href="https://scholar.google.com/citations?user=6v7tOfEAAAAJ" target="_blank">Zhenglin Zhou<sup>1,2</sup></a>,
+      <a href="https://flowerfan.site/" target="_blank">Fan Ma<sup>2</sup></a>,
+      <a href="https://hehefan.github.io/" target="_blank">Hehe Fan<sup>2,&#9993</sup></a>,
+      <a href="https://www.chuatatseng.com/" target="_blank">Tat-Seng Chua<sup>3</sup></a>
+    </p>
+    <!-- affiliations -->
+    <p class="subtitle is-5">
+      <sup>1</sup> State Key Laboratory of Brain-machine Intelligence, Zhejiang University </span> <br> <sup>2</sup> ReLER, CCAI, Zhejiang University </span> <br> <sup>3</sup> National University of Singapore
+    </p>
+
+    <!-- other links -->
+    <div class="is-flex is-justify-content-center">
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="" role="button" target="_blank"> <span class="icon"> <ion-icon name="document-outline"></ion-icon> </span> <span> Paper </span>  </a>
+      </span>
+      <span class="icon-text mx-1">
+        <a class="button is-dark" href="https://github.com/ZhenglinZhou/Zero-1-to-A/" role="button" target="_blank"> <span class="icon"> <ion-icon name="logo-github"></ion-icon> </span> <span> Code </span> </a>
+      </span>
+    </div><br>
+
+  </div>
+
+
+  <!-- main container -->
+  <div class="container is-max-desktop has-text-centered">
+
+
+
+    <!-- abstract -->
+<!--    <p class="title is-3 mt-5 has-text-centered"> Abstract </p>-->
+<!--    <p class="content is-size-6 has-text-left">-->
+<!--    <img src="images/teaser.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p>-->
+<!--    <p align="left">-->
+<!--      Creating digital avatars from textual prompts has long been a desirable yet challenging task.-->
+<!--      Despite the promising outcomes obtained through 2D diffusion priors in recent works, current methods face challenges in achieving high-quality and animated avatars effectively.-->
+<!--      In this paper, we present <strong><em>HeadStudio</em></strong>, a novel framework that utilizes 3D Gaussian splatting to generate realistic and animated avatars from text prompts.-->
+<!--      Our method drives 3D Gaussians semantically to create a flexible and achievable appearance through the intermediate FLAME representation.-->
+<!--      Specifically, we incorporate the FLAME into both 3D representation and score distillation:-->
+<!--      <b>1) FLAME-based 3D Gaussian splatting</b>, driving 3D Gaussian points by rigging each point to a FLAME mesh.-->
+<!--      <b>2) FLAME-based score distillation sampling</b>, utilizing FLAME-based fine-grained control signal to guide score distillation from the text prompt.-->
+<!--      Extensive experiments demonstrate the efficacy of <strong><em>HeadStudio</em></strong> in generating animatable avatars from textual prompts, exhibiting visually appealing appearances.-->
+<!--    </p>-->
+
+
+    <!-- results (videos) -->
+    <p class="title is-3 mt-5 has-text-centered"> Video </p>
+    <video muted autoplay controls loop> <source src="videos/teaser.mp4" type="video/mp4"> </video><br>
+
+
+    <p class="title is-3 mt-5 has-text-centered"> Method Overview </p>
+    <img src="images/syngen.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+    <p align="left">
+      <b>Zero-1-to-A</b> simultaneously builds both the dataset and avatar from scratch through video diffusion.
+      It establishes a mutually beneficial relationship between dataset construction and avatar reconstruction, iteratively updating the synthesized dataset and training the head avatar on the updated dataset to achieve unified results.
+    </p>
+    <br>
+    <img src="images/progressive.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+    <p align="left">
+      <b>Pipeline of Progressive Learning</b> sequences learning from simple to complex, facilitating symbiotic generation to create consistent avatars from inconsistent video diffusion.
+      This process divides 4D avatar generation into:
+      (1) Spatial Consistency Learning: progressing from frontal to side views with a fixed expression.
+      (2) Temporal Consistency Learning: learn from relaxed to hyperbole expressions under a fixed camera.
+    </p>
+
+    <p class="title is-3 mt-5 has-text-centered"> Static Avatar Generation </p>
+    <p class="content has-text-centered is-size-5">
+    Comparison with the 3D avatar generation methods.
+    </p>
+    <img src="images/comp_static.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+    <p class="title is-3 mt-5 has-text-centered"> Dynamic Avatar Generation </p>
+    <p class="content has-text-centered is-size-5">
+    Comparison with the 4D avatar generation methods.
+    </p>
+    <img src="images/comp_dynamic.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+    <p class="title is-3 mt-5 has-text-centered"> Talking Head Video Generation </p>
+    <p class="content has-text-centered is-size-5">
+    Comparison with the portrait video diffusion methods.
+    </p>
+    <img src="images/comp_video.png" height="150%" style="margin-left: auto;margin-right: auto;display: block;"/></p><br>
+
+<!--     citation-->
+    <div class="card mt-4">
+      <header class="card-header">
+        <p class="card-header-title"> Citation </p>
+      </header>
+      <div class="card-content is-size-5 has-text-left">
+<pre><code>
+@inproceedings{zhou2025zero1toa,
+  title = {Zero-1-to-A: Zero-Shot One Image to Animatable Head Avatars Using Video Diffusion},
+  author = {Zhenglin Zhou and Fan Ma and Hehe Fan and Tat-Seng Chua},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025},
+}
+</code></pre>
+      </div>
+    </div>
+
+  </div>
+  </section>
+</body>
+</html>
