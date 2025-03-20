@@ -4,7 +4,7 @@
 [**Zhenglin Zhou**](https://scholar.google.com/citations?user=6v7tOfEAAAAJ) · [**Fan Ma**](https://flowerfan.site/) · [**Hehe Fan<sup>*</sup>**](https://hehefan.github.io/) · [**Tat-Seng Chua**](https://www.chuatatseng.com/) 
 
 <a href='https://zhenglinzhou.github.io/Zero-1-to-A/'><img src='https://img.shields.io/badge/Project-Page-green'></a>
-<a href='https://github.com/ZhenglinZhou/Zero-1-to-A/assets/paper.pdf'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
+<a href='https://github.com/ZhenglinZhou/Zero-1-to-A/blob/code/assets/paper.pdf'><img src='https://img.shields.io/badge/Technique-Report-red'></a>
 
 </div>
 
